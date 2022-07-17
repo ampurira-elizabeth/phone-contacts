@@ -30,6 +30,5 @@ class ViewContactActivity : AppCompatActivity() {
         binding.tvPhone2.text=phone
         Picasso.get().load(intent.getStringExtra("IMAGE")).into(image3)
 
-//        Toast.makeText(this,"$name : $email : $address : $phone",Toast.LENGTH_LONG).show()
     }
 }
