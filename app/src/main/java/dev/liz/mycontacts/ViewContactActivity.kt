@@ -19,8 +19,6 @@ class ViewContactActivity : AppCompatActivity() {
     fun getExtras(){
         val extras=intent.extras
         val name=extras?.getString("NAME","")
-//        val email=extras?.getString("EMAIL","")
-//        val address=extras?.getString("ADDRESS","")
         val phone=extras?.getString("NUMBER","")
         var image3= binding.ivperson
 
