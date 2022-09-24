@@ -1,22 +1,20 @@
-package dev.liz.mycontacts
+package dev.liz.mycontacts.Ui
 
 import android.content.Intent
-import android.content.ReceiverCallNotAllowedException
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
+import dev.liz.mycontacts.Model.Contacts
+import dev.liz.mycontacts.R
 import dev.liz.mycontacts.databinding.ContactListItemBinding
 
 class contactsRvAdapter(var contactList:List<Contacts>):RecyclerView.Adapter<contactViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): contactViewHolder {
         var binding=ContactListItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        var contactViewHolder=contactViewHolder(binding)
+        var contactViewHolder= contactViewHolder(binding)
         return contactViewHolder
     }
 
@@ -38,7 +36,7 @@ class contactsRvAdapter(var contactList:List<Contacts>):RecyclerView.Adapter<con
         }
 
         holder.binding.cvContact.setOnClickListener {
-            var intent=Intent(context,ViewContactActivity::class.java)
+            var intent=Intent(context, ViewContactActivity::class.java)
             intent.putExtra("NAME",currentcontact.name)
             intent.putExtra("EMAIL",currentcontact.email)
             intent.putExtra("ADDRESS",currentcontact.address)

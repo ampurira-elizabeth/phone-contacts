@@ -1,4 +1,4 @@
-package dev.liz.mycontacts
+package dev.liz.mycontacts.Model
 
 data class Contacts(
     var name:String,

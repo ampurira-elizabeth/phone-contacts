@@ -1,4 +1,4 @@
-package dev.liz.mycontacts
+package dev.liz.mycontacts.Ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
