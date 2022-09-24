@@ -1,5 +1,6 @@
 package dev.liz.mycontacts.Repository
 
+import androidx.lifecycle.LiveData
 import dev.liz.mycontacts.Database.ContactsDB
 import dev.liz.mycontacts.Model.Contacts
 import dev.liz.mycontacts.MyContacts
@@ -14,5 +15,9 @@ class ContactsRepository {
         withContext(Dispatchers.IO){
             database.contactDao().insertContact(contacts)
         }
+    }
+
+    fun getContactById(contactId:Int):LiveData<Contacts>{
+        return database.contactDao().getContactById(contactId)
     }
 }
